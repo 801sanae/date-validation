@@ -1,0 +1,17 @@
+.future-date, .not-valid, .valid {
+    display: none;
+}
+
+.future-date {
+    color: orange;
+}
+.not-valid {
+    color: red;
+}
+.valid {
+    color: green;
+}
+
+.message {
+    margin: 10px;
+}

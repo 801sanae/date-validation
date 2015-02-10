@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>date validator</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+<h1>A validation about date of birth.</h1>
+<input id="day" type="tel" placeholder="dd"> /
+<input id="month" type="tel" placeholder="mm"> /
+<input id="year" type="tel" placeholder="yyyy">
+
+<button id="validate" type="submit" onclick="validateDOB()">Validate</button>
+<div class="message">
+    <label class="future-date">Not valid. It's a future date.</label>
+    <label class="not-valid">Not valid.</label>
+    <label class="valid">Valid. </label>
+</div>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
