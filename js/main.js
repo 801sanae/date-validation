@@ -25,7 +25,19 @@ function isThirtyDayMonth(month) {
     return false;
 }
 
+function isDOBEmptyOrZero(year, month, day) {
+    if(!day || !month || !year) {
+        return true;
+    } else if(day == 0 || month == 0 || year == 0) {
+        return true;
+    }
+    return false;
+}
 function validDate(year, month, day) {
+    var isDOBEmpty = isDOBEmptyOrZero(year, month, day);
+    if(isDOBEmpty){
+        return false;
+    }
     if (!year || year < 1900)
         return false;
     if (isLeapYear(year)) {
@@ -53,11 +65,15 @@ function validateDOB() {
 
     if (isFutureDate) {
         $(".future-date").css({display:'block'});
+        $(".not-valid").css({display:'none'});
+        $(".valid").css({display:'none'});
     }
 
     if (isValidDate) {
         $(".valid").css({display:'block'});
+        $(".not-valid").css({display:'none'});
     } else {
+        $(".valid").css({display:'none'});
         $(".not-valid").css({display:'block'});
     }
 }
